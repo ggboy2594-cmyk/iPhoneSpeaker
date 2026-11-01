@@ -8,7 +8,6 @@ struct iPhoneSpeakerApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(receiver)
-                .onAppear { receiver.start() }
         }
     }
 }
