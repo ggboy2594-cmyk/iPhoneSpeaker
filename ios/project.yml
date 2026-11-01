@@ -1,0 +1,24 @@
+name: iPhoneSpeaker
+options:
+  bundleIdPrefix: com.iphonespeaker
+settings:
+  base:
+    IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+    SWIFT_VERSION: "5.9"
+targets:
+  iPhoneSpeaker:
+    type: application
+    platform: iOS
+    sources:
+      - Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.iphonespeaker.receiver
+        PRODUCT_NAME: iPhoneSpeaker
+        INFOPLIST_KEY_CFBundleDisplayName: iPhoneSpeaker
+        INFOPLIST_KEY_NSLocalNetworkUsageDescription: "USB audio receiver connection."
+        INFOPLIST_KEY_UIBackgroundModes:
+          - audio
+        GENERATE_INFOPLIST_FILE: YES
+        CODE_SIGN_STYLE: Automatic
+        TARGETED_DEVICE_FAMILY: "1"
